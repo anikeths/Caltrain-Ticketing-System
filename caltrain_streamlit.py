@@ -20,6 +20,11 @@ Stations_dictionary = dict({
 
 import streamlit as st
 
+from PIL import Image
+image = Image.open('A Train.jpeg')
+
+st.image(image)
+
 st.header('Hi')
 
 def getKey(dct,value):
