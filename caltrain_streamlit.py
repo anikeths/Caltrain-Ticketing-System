@@ -95,11 +95,11 @@ elif zone_difference == 5:
   ticket_price = 15
 
 # print(ticket_price)
-st.markdown('Ticket price is $', ticket_price)
+st.markdown('Ticket price is $'+ ticket_price)
 
 ticket_price = str(ticket_price)
 
-st.download_button('Ticket price is $',ticket_price)
+st.download_button('Download my ticket',ticket_price)
     
 
 
