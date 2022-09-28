@@ -35,7 +35,7 @@ with col1:
     st.header('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
 
 with col2:   
-    st.image(image, width=700,caption = 'We take u forward!')
+    st.image(image, height=600,width=700,caption = 'We take u forward!')
 # st.image('https://www.cbr.com/the-boys-best-homelander-quotes/')
 
 def getKey(dct,value):
