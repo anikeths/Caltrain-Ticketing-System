@@ -25,6 +25,9 @@ from PIL import  Image
 image = Image.open('A Train.jpeg')
 image = image.resize((800,1500))
 
+image2 = Image.open('homelander.avif')
+image = image.resize((800,1500))
+
 
 col1, col2,col3 = st.columns(3)
 
@@ -39,7 +42,7 @@ with col2:
     st.image(image,caption = 'We take u forward!')
     
 with col3:
-    st.image('https://www.cbr.com/the-boys-best-homelander-quotes/')
+    st.image(image2)
 
 def getKey(dct,value):
   return [key for key in dct if (value in dct[key])]
