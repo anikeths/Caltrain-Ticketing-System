@@ -21,18 +21,22 @@ Stations_dictionary = dict({
 })
 
 import streamlit as st
-
-st.title('A-Train welcomes you aboard!')
-st.title('Our Mission: We present to you: ')
-st.title('Our Compound WE:')
-st.title('-Takes you forward!')
-st.title('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
-
 from PIL import  Image
 image = Image.open('A Train.jpeg')
 
-st.image(image, caption = 'We take u forward!')
-st.image('https://www.cbr.com/the-boys-best-homelander-quotes/')
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.title('A-Train welcomes you aboard!')
+    st.title('Our Mission: We present to you: ')
+    st.title('Our Compound WE:')
+    st.title('-Takes you forward!')
+    st.title('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
+
+with col2:   
+    st.image(image, caption = 'We take u forward!')
+# st.image('https://www.cbr.com/the-boys-best-homelander-quotes/')
 
 def getKey(dct,value):
   return [key for key in dct if (value in dct[key])]
