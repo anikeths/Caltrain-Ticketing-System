@@ -23,7 +23,7 @@ Stations_dictionary = dict({
 import streamlit as st
 from PIL import  Image
 image = Image.open('A Train.jpeg')
-image = image.resize((600,700))
+image = image.resize((800,1000))
 
 
 col1, col2 = st.columns(2)
