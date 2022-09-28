@@ -101,7 +101,7 @@ st.download_button(
     label="Download your ticket",
     data=csv,
     file_name='large_df.csv',
-    mime='text/csv',
+    mime='text/csv',)
 
 
 # !pip install streamlit
