@@ -9,6 +9,8 @@ Original file is located at
 
 # Caltrain program with Streamlit
 
+
+
 Stations_dictionary = dict({
             'Zone-1':['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno'],
              'Zone-2':['Millbrae Transit Center','Broadway','Burlingame','San Mateo','Hayward Park','Hillsdale','Belmont','San Carlos','Redwood City'],
@@ -20,12 +22,17 @@ Stations_dictionary = dict({
 
 import streamlit as st
 
-from PIL import Image
+st.title('A-Train welcomes you aboard!')
+st.title('Our Mission: We present to you: ')
+st.title('Our Compound WE:')
+st.title('-Takes you forward!')
+st.title('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
+
+from PIL import  Image
 image = Image.open('A Train.jpeg')
 
-st.image(image)
-
-st.header('Hi')
+st.image(image, caption = 'We take u forward!')
+st.image('https://www.cbr.com/the-boys-best-homelander-quotes/')
 
 def getKey(dct,value):
   return [key for key in dct if (value in dct[key])]
@@ -87,4 +94,5 @@ elif zone_difference == 5:
 st.markdown(ticket_price)
 
 # !pip install streamlit
+
 
