@@ -31,8 +31,8 @@ with col1:
     st.header('A-Train welcomes you aboard!')
     st.header('Our Mission: We present to you: ')
     st.header('Our Compound WE:')
-    st.title('-Takes you forward!')
-    st.title('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
+    st.header('-Takes you forward!')
+    st.header('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
 
 with col2:   
     st.image(image, caption = 'We take u forward!')
