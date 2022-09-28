@@ -8,17 +8,6 @@ Original file is located at
 """
 
 # Caltrain program with Streamlit
-from PIL import Image
-
-image = Image.open('A Train.jpg')
-
-st.image(image, caption='We take u forward!')
-
-
-
-
-
-
 
 Stations_dictionary = dict({
             'Zone-1':['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno'],
