@@ -26,7 +26,7 @@ image = Image.open('A Train.jpeg')
 image = image.resize((800,1500))
 
 
-col1, col2 = st.columns(2)
+col1, col2,col3 = st.columns(3)
 
 with col1:
     st.header('A-Train welcomes you aboard!')
@@ -37,7 +37,9 @@ with col1:
 
 with col2:   
     st.image(image,caption = 'We take u forward!')
-# st.image('https://www.cbr.com/the-boys-best-homelander-quotes/')
+    
+with col3:
+    st.image('https://www.cbr.com/the-boys-best-homelander-quotes/')
 
 def getKey(dct,value):
   return [key for key in dct if (value in dct[key])]
