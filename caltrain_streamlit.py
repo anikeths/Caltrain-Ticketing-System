@@ -97,6 +97,8 @@ elif zone_difference == 5:
 # print(ticket_price)
 st.markdown('Ticket price is $', ticket_price)
 
+ticket_price = str(ticket_price)
+
 st.download_button('Ticket price is $',ticket_price)
     
 
