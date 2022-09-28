@@ -94,9 +94,15 @@ elif zone_difference == 4:
 elif zone_difference == 5:
   ticket_price = 15
 
-
 # print(ticket_price)
-st.markdown(ticket_price)
+st.markdown('Ticket price is $', ticket_price)
+
+st.download_button(
+    label="Download your ticket",
+    data=csv,
+    file_name='large_df.csv',
+    mime='text/csv',
+
 
 # !pip install streamlit
 
