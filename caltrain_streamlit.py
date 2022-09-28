@@ -28,9 +28,9 @@ image = Image.open('A Train.jpeg')
 col1, col2 = st.columns(2)
 
 with col1:
-    st.title('A-Train welcomes you aboard!')
-    st.title('Our Mission: We present to you: ')
-    st.title('Our Compound WE:')
+    st.header('A-Train welcomes you aboard!')
+    st.header('Our Mission: We present to you: ')
+    st.header('Our Compound WE:')
     st.title('-Takes you forward!')
     st.title('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
 
