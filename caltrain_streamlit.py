@@ -25,7 +25,7 @@ from PIL import  Image
 image = Image.open('A Train.jpeg')
 image = image.resize((800,1500))
 
-image2 = Image.open('homelander.avif')
+image2 = Image.open('homelander.jpeg')
 image3 = image.resize((800,1500))
 
 
