@@ -29,33 +29,44 @@ col1, col2,col3 = st.columns(3)
 
 with col1:
     st.header('A-Train welcomes you aboard!')
-    st.header('Our Mission: We present to you: ')
+#     st.header('Our Mission: We present to you: ')
     st.header('Our Compound WE:')
-    st.header('-Takes you forward!')
-    st.header('-Makes sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
+    st.header('-Takes you forward! while')
+    st.header('-Makeing sure that your HOMELANDing experience is safe and as fast as STARLIGHT itself.')
 
 with col2:   
     st.image(image,caption = 'We take u forward!')
    
-
 def getKey(dct,value):
   return [key for key in dct if (value in dct[key])]
 
-try:
-  entry_station = st.text_input('Enter your entry station')
-except ValueError:
-  st.error('Enter an input')
+entry_station = st.multiselect(
+    'Enter your entry station',
+    ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
+    )
+
+st.write('You selected:', entry_station)
+
+# try:
+#   entry_station = st.text_input('Enter your entry station')
+# except ValueError:
+#   st.error('Enter an input')
 
 try:
   entry_zone=getKey(Stations_dictionary,entry_station)[0]
 except IndexError:
   st.error('Enter an input')
 
+exit_station = st.multiselect(
+    'Enter your exit station, ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
+    )
 
-try:
-  exit_station = st.text_input('Enter your exit station')
-except IndexError:
-  st.error('Enter an input')
+st.write('You selected:', exit_station)
+
+# try:
+#   exit_station = st.text_input('Enter your exit station')
+# except IndexError:
+#   st.error('Enter an input')
 
 try:
  exit_zone = getKey(Stations_dictionary,exit_station)[0]
@@ -74,7 +85,6 @@ except IndexError:
 # st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 price_dictionary = dict({'Zone-1': 1, 'Zone-2':2,'Zone-3':3,'Zone-4':4, 'Zone-5':5,'Zone-6':6})
-
 
 zone_difference = abs(price_dictionary[entry_zone] - price_dictionary[exit_zone])
 print(zone_difference)
