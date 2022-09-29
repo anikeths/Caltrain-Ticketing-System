@@ -40,7 +40,7 @@ with col2:
 def getKey(dct,value):
   return [key for key in dct if (value in dct[key])]
 
-entry_station = st.multiselect(
+entry_station = st.selectbox(
     'Enter your entry station',
     ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
     )
@@ -57,7 +57,7 @@ try:
 except IndexError:
   st.error('Enter an input')
 
-exit_station = st.multiselect(
+exit_station = st.selectbox(
     'Enter your exit station, ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
     )
 
