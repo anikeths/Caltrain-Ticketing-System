@@ -42,7 +42,7 @@ def getKey(dct,value):
 
 entry_station = st.selectbox(
     'Enter your entry station',
-    ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
+    ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno','Millbrae Transit Center','Broadway','Burlingame','San Mateo','Hayward Park','Hillsdale','Belmont','San Carlos','Redwood City','Menlo Park','Palo Alto','Stanford', 'California Ave.','San Antonio','Mountain View','Sunnyvale','Lawrence','Santa Clara','College Park','San Jose Diridon','Tamien','Capitol','Blossom Hill','Morgan Hill','San Martin','Gilroy']
     )
 
 st.write('You selected:', entry_station)
@@ -58,7 +58,8 @@ except IndexError:
   st.error('Enter an input')
 
 exit_station = st.selectbox(
-    'Enter your exit station', ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
+    'Enter your exit station',
+    ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno','Millbrae Transit Center','Broadway','Burlingame','San Mateo','Hayward Park','Hillsdale','Belmont','San Carlos','Redwood City','Menlo Park','Palo Alto','Stanford', 'California Ave.','San Antonio','Mountain View','Sunnyvale','Lawrence','Santa Clara','College Park','San Jose Diridon','Tamien','Capitol','Blossom Hill','Morgan Hill','San Martin','Gilroy']
     )
 
 st.write('You selected:', exit_station)
