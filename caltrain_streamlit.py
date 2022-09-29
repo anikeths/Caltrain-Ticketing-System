@@ -58,7 +58,7 @@ except IndexError:
   st.error('Enter an input')
 
 exit_station = st.selectbox(
-    'Enter your exit station, ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
+    'Enter your exit station', ['San Francisco','22nd Street','Bayshore','South San Francisco','San Bruno']
     )
 
 st.write('You selected:', exit_station)
