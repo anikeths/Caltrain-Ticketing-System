@@ -21,22 +21,21 @@ Stations_dictionary = dict({
 })
 
 import streamlit as st
-import os
-import s3fs
-import boto3
+# import os
+# import s3fs
+# import boto3
 
-fs=s3fs.S3FileSystem(anon = False)
+# fs=s3fs.S3FileSystem(anon = False)
 
-#Creating Session With Boto3.
-session = boto3.Session(
-aws_access_key_id='AKIA2BCQHJ4O3FBPMGYP',
-aws_secret_access_key='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'
-)
+# #Creating Session With Boto3.
+# session = boto3.Session(
+# aws_access_key_id='AKIA2BCQHJ4O3FBPMGYP',
+# aws_secret_access_key='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'
+# )
 
-#Creating S3 Resource From the Session.
-s3 = session.resource('s3')
+# #Creating S3 Resource From the Session.
+# s3 = session.resource('s3')
 
-import streamlit as st
 from PIL import  Image
 image = Image.open('A Train.jpeg')
 image = image.resize((800,1500))
@@ -123,17 +122,17 @@ elif zone_difference == 5:
 # print(ticket_price)
 st.write('Ticket price is $', ticket_price)
 
-ticketprice = str(ticket_price)
-bticket_price = bytes(ticketprice, encoding='utf-8')
-object = s3.Object('bucketbidw', 'ticketprice.txt')
-result = object.put(Body=bticket_price)
+# ticketprice = str(ticket_price)
+# bticket_price = bytes(ticketprice, encoding='utf-8')
+# object = s3.Object('bucketbidw', 'ticketprice.txt')
+# result = object.put(Body=bticket_price)
 
 st.download_button('Download my ticket',ticket_price)
 
-if res.get('HTTPStatusCode') == 200:
-  st.write('File Uploaded Successfully to S3 bucket')
-else:
-  print('File Not Uploaded to S3 bucket')
+# if res.get('HTTPStatusCode') == 200:
+#   st.write('File Uploaded Successfully to S3 bucket')
+# else:
+#   print('File Not Uploaded to S3 bucket')
 
 # !pip install streamlit
 
