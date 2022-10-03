@@ -7,6 +7,10 @@ Original file is located at
     https://colab.research.google.com/drive/1lY3rmkxwU7OUyh33owLAUchla3v094zr
 """
 
+
+
+
+
 # Caltrain program with Streamlit
 
 Stations_dictionary = dict({
@@ -19,6 +23,11 @@ Stations_dictionary = dict({
 })
 
 import streamlit as st
+import os
+
+fs=s3fs.FileSystem(anon = False)
+
+
 
 def getKey(dct,value):
   return [key for key in dct if (value in dct[key])]
@@ -78,6 +87,12 @@ elif zone_difference == 5:
 
 # print(ticket_price)
 st.markdown(ticket_price)
+
+
+def write_to_file(filename):
+    with fs.open('readme.txt', 'w') as f:
+        f.write(ticket_price)
+      
 
 # !pip install streamlit
 
