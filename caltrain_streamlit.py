@@ -25,7 +25,7 @@ Stations_dictionary = dict({
 import streamlit as st
 import os
 
-fs=s3fs.FileSystem(anon = False)
+# fs=s3fs.FileSystem(anon = False)
 
 
 
